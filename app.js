@@ -1,11 +1,17 @@
-var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var bodyParser = require('body-parser');
+const express = require('express');
+const path = require('path');
+const favicon = require('serve-favicon');
+const logger = require('morgan');
+const bodyParser = require('body-parser');
 
-var user = require('./routes/user');
-var app = express();
+const user = require('./routes/user');
+const app = express();
+
+const mongoose = require('mongoose');
+mongoose.Promise = require('bluebird');
+mongoose.connect('mongodb://localhost/mean-angular5', { promiseLibrary: require('bluebird') })
+  .then(() =>  console.log('connection succesful'))
+.catch((err) => console.error(err));
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
@@ -16,7 +22,7 @@ app.use('/user', user);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  var err = new Error('Not Found');
+  let err = new Error('Not Found');
   err.status = 404;
   next(err);
 });
