@@ -10,7 +10,7 @@ mongoose.connect('mongodb://localhost/user_list', { promiseLibrary: require('blu
         .next(function(err, collinfo) {
           if (collinfo) {
             // The collection exists
-            console.log(collinfo);
+            return console.log(collinfo);
           }
           else{
             console.log('db is empty');

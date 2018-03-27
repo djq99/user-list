@@ -1,0 +1,25 @@
+<div class="container">
+  <!--<table class="table">-->
+    <!--<thead>-->
+
+    <!--</thead>-->
+    <!--<tbody>-->
+    <!--<tr *ngFor="let user of users">-->
+      <!--<td> <img src="{{user.picture.thumbnail}}"></td>-->
+    <!--</tr>-->
+    <!--</tbody>-->
+  <!--</table>-->
+  <div>
+    <input ng-model="searchText" placeholder="enter search term here">
+
+    <div class="col-lg-2 col-md-2 col-xs-1" *ngFor="let user of users">
+      <a href={{user._id}} class="d-block mb-4 h-100">
+        <figure>
+        <img class="img-fluid img-thumbnail" src="{{user.picture.thumbnail}}">
+          <figcaption>{{user.name.first}} {{user.name.last}}</figcaption>
+        </figure>
+      </a>
+      <br/><br/>
+    </div>
+  </div>
+</div>

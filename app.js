@@ -4,21 +4,21 @@ const favicon = require('serve-favicon');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
 
+const mongoose = require('./db_config/db');
 const user = require('./routes/user');
-const app = express();
 
-const mongoose = require('mongoose');
-mongoose.Promise = require('bluebird');
-mongoose.connect('mongodb://localhost/mean-angular5', { promiseLibrary: require('bluebird') })
-  .then(() =>  console.log('connection succesful'))
-.catch((err) => console.error(err));
+const app = express();
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({'extended':'false'}));
 app.use(express.static(path.join(__dirname, 'dist')));
 app.use('/users', express.static(path.join(__dirname, 'dist')));
+
 app.use('/user', user);
+
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -37,5 +37,6 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
 
 module.exports = app;
