@@ -6,8 +6,11 @@ const User = require('../models/User');
 const _= require('lodash');
 
 
+router.get('/',function(req, res, next){
+  res.redirect('/');
+})
 /*Get all users*/
-router.get('/', function(req, res, next) {
+router.post('/', function(req, res, next) {
   User.find(function (err, users) {
     if (err) return next(err);
     res.json(users);
@@ -37,6 +40,10 @@ router.patch('/:id',function(req,res,next){
 
 })
 
+
+router.get('*', function(req, res){
+  res.status(404).send('Page Not Found!');
+});
 
 
 module.exports = router;

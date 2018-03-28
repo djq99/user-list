@@ -16,7 +16,7 @@ export class UsersComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.http.get('/user').subscribe(data => {
+    this.http.post('/user',{}).subscribe(data => {
       this.users = data;
       this.assignedUsers = this.users.filter((user)=> user.assigned === true);
     });

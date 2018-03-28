@@ -17,6 +17,7 @@ const appRoutes: Routes = [
     redirectTo: '/user',
     pathMatch: 'full'
   }
+
 ];
 
 
