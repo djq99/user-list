@@ -12,7 +12,6 @@ const appRoutes: Routes = [
   {
     path: 'user',
     component: UsersComponent,
-    // data: { title: 'User List' }
   },
   { path: '',
     redirectTo: '/user',

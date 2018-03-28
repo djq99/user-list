@@ -3,10 +3,10 @@ const fs = require('fs');
 const User = require('./../models/User');
 
 mongoose.Promise = require('bluebird');
-mongoose.connect('mongodb://localhost/user_list', { promiseLibrary: require('bluebird') })
+mongoose.connect(process.env.MONGODB_URI ||'mongodb://localhost/user_list', { promiseLibrary: require('bluebird') })
     .then(() =>  {
 
-      mongoose.connection.db.listCollections({name: 'users'})
+      mongoose.connection.db.listCollections()
         .next(function(err, collinfo) {
           if (collinfo) {
             // The collection exists
