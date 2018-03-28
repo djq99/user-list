@@ -1,27 +1,28 @@
 # UserList
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
+One page application to display users' information with MEAN stack
 
-## Development server
+## Test it remotely
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+I have set it up remotely through Heroku. Below is the link:
 
-## Code scaffolding
+[https://afternoon-reef-98542.herokuapp.com](https://afternoon-reef-98542.herokuapp.com)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## How to run it locally
 
-## Build
+- Clone or download the project.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+- Make sure you have latest version of NodeJs and installed [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
 
-## Running unit tests
+- Make sure your Mongodb is running.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Run `npm install` to install the dependencies.
 
-## Running end-to-end tests
+- Run `npm start` to start server.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+- Type `localhost:3000` in your browser.
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+
