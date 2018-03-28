@@ -9,6 +9,10 @@ const UserSchema = new mongoose.Schema({
     large: String,
     medium: String,
     thumbnail: String
+  },
+  assigned:{
+    type:Boolean,
+    default:false
   }
 
 });

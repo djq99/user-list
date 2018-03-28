@@ -1,5 +1,10 @@
-#container {
+.container {
+  margin: auto;
+  width: 100%;
   text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 a, figure {
   display: inline-block;
@@ -13,16 +18,40 @@ figcaption {
 figure {
   padding: 5px;
 }
-img:hover {
-  transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  -webkit-transform: scale(1.1);
-  -moz-transform: scale(1.1);
-  -o-transform: scale(1.1);
+/*img:hover {*/
+  /*transform: scale(1.1);*/
+  /*-ms-transform: scale(1.1);*/
+  /*-webkit-transform: scale(1.1);*/
+  /*-moz-transform: scale(1.1);*/
+  /*-o-transform: scale(1.1);*/
+/*}*/
+/*img {*/
+  /*transition: transform 0.2s;*/
+  /*-webkit-transition: -webkit-transform 0.2s;*/
+  /*-moz-transition: -moz-transform 0.2s;*/
+  /*-o-transition: -o-transform 0.2s;*/
+/*}*/
+#searchinput {
+  margin: auto;
+  width: 500px;
+
 }
-img {
-  transition: transform 0.2s;
-  -webkit-transition: -webkit-transform 0.2s;
-  -moz-transition: -moz-transform 0.2s;
-  -o-transition: -o-transform 0.2s;
+#searchclear {
+  position: absolute;
+  right: 5px;
+  top: 0;
+  bottom: 0;
+  height: 14px;
+  margin: auto;
+  font-size: 14px;
+  cursor: pointer;
+  color: #ccc;
+}
+
+.ok, .glyphicon glyphicon-ok{
+  color: green;
+}
+
+.remove, .glyphicon glyphicon-remove{
+  color: red;
 }
